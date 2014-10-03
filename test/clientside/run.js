@@ -19,7 +19,7 @@ function run(name) {
     .on('end', function () {
       // require('fs').writeFileSync(require('path').join(__dirname, '../../examples/bundle.js'), src, 'utf-8')
 
-      vm.runInNewContext(src, { 
+      vm.runInNewContext(src, {
           setTimeout    :  setTimeout
         , clearInterval :  clearInterval
         , console       :  console
@@ -32,3 +32,4 @@ run('independent-overrides')
 run('manipulating-overrides')
 run('noCallThru')
 run('argument-validation')
+run('../bugs/instanceof/test');
